@@ -5,6 +5,8 @@ from dash_iconify import DashIconify
 
 app = Dash(use_pages=True, external_stylesheets=dmc.styles.ALL, suppress_callback_exceptions=True)
 
+server = app.server
+
 logo = "./assets/logo.png"
 
 def get_icon(icon):
@@ -86,3 +88,4 @@ def toggle_navbar(mobile_opened, desktop_opened, navbar):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
