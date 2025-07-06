@@ -3,7 +3,7 @@ import dash
 from dash import Dash, Input, Output, State, callback
 from dash_iconify import DashIconify
 
-app = Dash(use_pages=True, external_stylesheets=dmc.styles.ALL, suppress_callback_exceptions=True)
+app = Dash(use_pages=True, external_stylesheets=dmc.styles.ALL, suppress_callback_exceptions=True,assets_folder='assets')
 
 server = app.server
 
