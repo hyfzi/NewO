@@ -7,8 +7,6 @@ app = Dash(use_pages=True, external_stylesheets=dmc.styles.ALL, suppress_callbac
 
 server = app.server
 
-logo = "./assets/logo.png"
-
 def get_icon(icon):
     return DashIconify(icon=icon, height=16)
 
@@ -29,7 +27,7 @@ layout = dmc.AppShell(
                         visibleFrom="sm",
                         opened=True,
                     ),
-                    dmc.Image(src=logo, h=50, flex=0),
+                    dmc.Image(src=dash.get_asset_url("logo.png"), h=50, flex=0),
                     dmc.Title("NewO",  c="black", order=2),
                 ],
                 h="100%",
