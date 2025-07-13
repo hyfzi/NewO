@@ -1,6 +1,7 @@
 import dash_mantine_components as dmc
 import dash
-from dash import Dash, Input, Output, State, callback
+from dash import Dash, Input, Output, State, callback,_dash_renderer
+_dash_renderer._set_react_version("18.2.0")
 from dash_iconify import DashIconify
 
 app = Dash(use_pages=True, external_stylesheets=dmc.styles.ALL, suppress_callback_exceptions=True,assets_folder='assets')
@@ -37,7 +38,7 @@ layout = dmc.AppShell(
         dmc.AppShellNavbar(
             id="navbar",
             children=[
-                "Navbar",
+                # "Navbar",
                 dmc.NavLink(
                     label="home",
                     href="/", active='exact',
@@ -50,7 +51,7 @@ layout = dmc.AppShell(
                     leftSection=get_icon(icon="tabler:gauge"),
                     childrenOffset=28,
                     children=[
-                        dmc.NavLink(label="AE Explorer", href='/ae-explorer', active='exact'),
+                        dmc.NavLink(label="AE Summary", href='/ae-summary', active='exact'),
                     ]
                 ),
             ],

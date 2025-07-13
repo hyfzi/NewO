@@ -1,0 +1,10 @@
+
+.ag-theme-alpine .ag-header-cell-label {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* 单元格字体 */
+.ag-theme-alpine .ag-cell {
+    font-size: 10px;
+}
